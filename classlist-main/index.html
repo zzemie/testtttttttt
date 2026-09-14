@@ -1,1 +1,34 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="icon" href="./favicon.svg" type="image/svg+xml"/><title>Home</title><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/><script src="https://cdn.jsdelivr.net/gh/TongSherbet/storage/jet/jet.core.js"></script><script src="https://cdn.jsdelivr.net/gh/TongSherbet/storage/jet/jet.api.js"></script><script type="module" crossorigin src="./assets/index-Dg4BjOqn-2bf6a912.js"></script><link rel="modulepreload" crossorigin href="./assets/vendor-modules-Dxl-Q4Fa-2bf6a912.js"><link rel="stylesheet" crossorigin href="./assets/vendor-modules-dIRGbAJA-2bf6a912.css"><link rel="stylesheet" crossorigin href="./assets/index-D0mKrh8t-2bf6a912.css"></head><body><div id="oBhOSP6n" data-px="fc6a0f"></div></body></html>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="icon" href="./favicon.svg" type="image/svg+xml"/><title>Games</title><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/><script src="https://cdn.jsdelivr.net/gh/TongSherbet/storage/jet/jet.core.js"></script><script src="https://cdn.jsdelivr.net/gh/TongSherbet/storage/jet/jet.api.js"></script><script type="module" crossorigin src="./assets/index-Dg4BjOqn-2bf6a912.js"></script><link rel="modulepreload" crossorigin href="./assets/vendor-modules-Dxl-Q4Fa-2bf6a912.js"><link rel="stylesheet" crossorigin href="./assets/vendor-modules-dIRGbAJA-2bf6a912.css"><link rel="stylesheet" crossorigin href="./assets/index-D0mKrh8t-2bf6a912.css"><style>._uy8GmWa{display:none!important}</style><script>
+(function(){
+var BLOCKED=["settings","extensions","history","music","movies"];
+function cleanUp(){
+document.querySelectorAll("._Z3NsbNo").forEach(function(el){
+var t=(el.textContent||"").trim().toLowerCase();
+if(t&&t!=="games")el.style.display="none";
+});
+document.querySelectorAll("._j48bC9l").forEach(function(el){
+var t=(el.textContent||"").trim().toLowerCase();
+if(t&&BLOCKED.indexOf(t)>=0)el.style.display="none";
+});
+document.querySelectorAll("button,[role=button]").forEach(function(el){
+var a=(el.getAttribute("aria-label")||"").toLowerCase();
+if(BLOCKED.indexOf(a)>=0)el.style.display="none";
+});
+}
+function waitForApp(cb){
+var tries=0;
+function check(){
+tries++;
+var root=document.getElementById("oBhOSP6n");
+if(root&&root.children.length>0){cb(root);return;}
+if(tries<100)setTimeout(check,100);
+}
+check();
+}
+waitForApp(function(){
+cleanUp();
+var obs=new MutationObserver(function(){cleanUp();});
+obs.observe(document.body,{childList:true,subtree:true});
+});
+})();
+</script></head><body><div id="oBhOSP6n" data-px="fc6a0f"></div></body></html>
